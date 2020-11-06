@@ -1,7 +1,5 @@
 // Variables
-let rockCard = document.querySelector("#rockCard");
-let paperCard = document.querySelector("#paperCard");
-let scissorsCard = document.querySelector("#scissorsCard");
+let userChoiceCards = document.querySelectorAll(".userChoiceCards");
 let userMoveCard = document.querySelector("#userMoveCard");
 
 let userMove = "";
@@ -29,6 +27,6 @@ function setCompMove() {
 }
 
 // Event listeners
-rockCard.addEventListener("click", setUserMove);
-paperCard.addEventListener("click", setUserMove);
-scissorsCard.addEventListener("click", setUserMove);
+for (let i=0; i < userChoiceCards.length; i++) {
+    userChoiceCards[i].addEventListener("click", setUserMove);
+}
