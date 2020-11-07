@@ -14,3 +14,9 @@
 .hide {
     display: none;
 }
+
+#result {
+    text-align: center;
+    padding: 30px;
+    font-size: 2em;
+}

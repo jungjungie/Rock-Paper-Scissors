@@ -6,6 +6,7 @@ let userIcon = document.querySelector(".userIcon");
 let compMoveCard = document.querySelector("#compMoveCard");
 let compMoveText = document.querySelector("#compMoveText");
 let compIcon = document.querySelector(".compIcon");
+let result = document.querySelector("#result");
 
 // Variables
 let userMove = "";
@@ -17,7 +18,7 @@ function setUserMove(event) {
     // console.log(event.target.textContent)
 
     userMove = event.target.textContent.trim();
-    console.log(userMove);
+    // console.log(userMove);
 
     // Displays text for the move the user chose
     userMoveText.textContent = userMove;
@@ -43,7 +44,7 @@ function setCompMove() {
     let moves = ["ROCK", "PAPER", "SCISSORS"];
 
     compMove = moves[Math.floor(Math.random() * 3)];
-    console.log(compMove);
+    // console.log(compMove);
 
     // Displays text for the move the comp chose
     compMoveText.textContent = compMove;
@@ -59,6 +60,23 @@ function setCompMove() {
     } else {
         compIcon.setAttribute("class", "fa fa-5x fa-hand-scissors-o show");
         compIcon.setAttribute("aria-hidden", "true");
+    }
+
+    determineWinner();
+}
+
+// Determines winner
+function determineWinner() {
+
+    console.log(`user: ${userMove}`);
+    console.log(`comp: ${compMove}`);
+
+    if (userMove === compMove) {
+        result.textContent="It's a tie!"
+    } else if ((userMove === "ROCK" && compMove === "SCISSORS") || (userMove === "PAPER" && compMove === "ROCK") || (userMove === "SCISSORS" && compMove === "PAPER")) {
+        result.textContent="You win!"
+    } else {
+        result.textContent="The computer won!"
     }
 }
 
