@@ -1,7 +1,10 @@
-// Variables
+// HTML Variables
 let userChoiceCards = document.querySelectorAll(".userChoiceCards");
 let userMoveCard = document.querySelector("#userMoveCard");
+let userMoveText = document.querySelector("#userMoveText");
+let userIcon = document.querySelector(".userIcon");
 
+// Variables
 let userMove = "";
 let compMove = ""
 
@@ -13,7 +16,21 @@ function setUserMove(event) {
     userMove = event.target.textContent.trim();
     console.log(userMove);
 
-    userMoveCard.textContent = userMove;
+    // Displays text for the move the user chose
+    userMoveText.textContent = userMove;
+    userMoveText.setAttribute("class", "show")   
+
+    // Sets the userIcon for the move the user chose and displays it
+    if (userMove === "ROCK") {
+        userIcon.setAttribute("class", "fa fa-5x fa-hand-rock-o show");
+        userIcon.setAttribute("aria-hidden", "true");
+    } else if (userMove === "PAPER") {
+        userIcon.setAttribute("class", "fa fa-5x fa-hand-paper-o show");
+        userIcon.setAttribute("aria-hidden", "true");
+    } else {
+        userIcon.setAttribute("class", "fa fa-5x fa-hand-scissors-o show");
+        userIcon.setAttribute("aria-hidden", "true");
+    }
 
     setCompMove();
 }

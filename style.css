@@ -1,0 +1,16 @@
+.container {
+    min-height: 300px;
+    border: 1px solid black;
+}
+
+#userMoveCard {
+    height: 100%;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
