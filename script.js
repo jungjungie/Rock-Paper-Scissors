@@ -3,6 +3,9 @@ let userChoiceCards = document.querySelectorAll(".userChoiceCards");
 let userMoveCard = document.querySelector("#userMoveCard");
 let userMoveText = document.querySelector("#userMoveText");
 let userIcon = document.querySelector(".userIcon");
+let compMoveCard = document.querySelector("#compMoveCard");
+let compMoveText = document.querySelector("#compMoveText");
+let compIcon = document.querySelector(".compIcon");
 
 // Variables
 let userMove = "";
@@ -41,6 +44,22 @@ function setCompMove() {
 
     compMove = moves[Math.floor(Math.random() * 3)];
     console.log(compMove);
+
+    // Displays text for the move the comp chose
+    compMoveText.textContent = compMove;
+    compMoveText.setAttribute("class", "show")   
+
+    // Sets the compIcon for the move the comp chose and displays it
+    if (compMove === "ROCK") {
+        compIcon.setAttribute("class", "fa fa-5x fa-hand-rock-o show");
+        compIcon.setAttribute("aria-hidden", "true");
+    } else if (compMove === "PAPER") {
+        compIcon.setAttribute("class", "fa fa-5x fa-hand-paper-o show");
+        compIcon.setAttribute("aria-hidden", "true");
+    } else {
+        compIcon.setAttribute("class", "fa fa-5x fa-hand-scissors-o show");
+        compIcon.setAttribute("aria-hidden", "true");
+    }
 }
 
 // Event listeners
