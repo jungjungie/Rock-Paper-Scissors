@@ -1,6 +1,67 @@
+/* General */
+body {
+    background: #fce6e9;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* RPS Cards */
+#directions {
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+.userChoiceCards {
+    width: 100px;
+    height: 100px;
+    margin: 0 0 30px 0;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#rockCard {
+    background: #d2b6e5;
+}
+
+#rockCard:hover {
+    background: #c3a3d8;
+    margin-top: 3px;
+    transition: 0.5s;
+}
+
+#paperCard {
+    background: #e3b6e5;
+}
+
+#paperCard:hover {
+    background: #d9a3dc;
+    margin-top: 3px;
+    transition: 0.5s;
+}
+
+#scissorsCard {
+    background: #1ce3dc;
+}
+
+#scissorsCard:hover {
+    background: #0fd3cd;
+    margin-top: 3px;
+    transition: 0.5s;
+}
+
+.card-text {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main - Where player & comp moves populate */
 .container {
     min-height: 300px;
-    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+    color: black;
 }
 
 #userMoveCard {
@@ -9,7 +70,16 @@
 
 .show {
     display: block;
+    color: #333;
+    animation: fadeIn ease 0.7s;
+    -webkit-animation: fadeIn ease 0.7s;
 }
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
 
 .hide {
     display: none;
