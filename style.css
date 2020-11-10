@@ -5,10 +5,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.white {
-    color: white;
-}
-
 .show {
     display: block;
     color: #444;
@@ -37,15 +33,11 @@ body {
     min-height: 300px;
     border-radius: 5px;
     background: white;
-    color: black;
+    color: #444;
 }
 
 h3 {
-    margin-top:15px;
-}
-
-#userMoveCard {
-    height: 100%;
+    margin-top: 50px;
 }
 
 #userMoveText, #compMoveText {
@@ -53,15 +45,19 @@ h3 {
 }
 
 /* Results */
+#result-box {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
 #result {
     text-align: center;
-    padding: 30px;
     font-size: 2em;
+    color: white;
 }
 
 /* RPS Cards */
 #directions {
-    margin-top: 50px;
     font-size: 24px;
 }
 
@@ -89,11 +85,4 @@ h3 {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     margin: 8px 0 0 0;
-}
-
-/* Media Queries */
-@media (max-width: 450px) {
-    #directions {
-        margin-top: 10px;
-    }
 }

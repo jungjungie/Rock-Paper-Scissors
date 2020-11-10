@@ -71,7 +71,7 @@ function determineWinner() {
     console.log(`user: ${userMove}`);
     console.log(`comp: ${compMove}`);
 
-    result.setAttribute("class", "show white");
+    result.setAttribute("class", "show");
 
     if (userMove === compMove) {
         result.textContent="It's a tie!"
