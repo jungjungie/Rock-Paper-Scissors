@@ -80,9 +80,20 @@ function determineWinner() {
     } else {
         result.textContent="The computer won!"
     }
+
+    // Clears moves & results
+    setTimeout(function () {
+        userIcon.setAttribute("class", "hide");
+        userMoveText.setAttribute("class", "hide");   
+        compIcon.setAttribute("class", "hide");
+        compMoveText.setAttribute("class", "hide")   
+        result.textContent="";
+    }, 2000);
 }
 
 // Event listeners
 for (let i=0; i < userChoiceCards.length; i++) {
     userChoiceCards[i].addEventListener("click", setUserMove);
 }
+
+// Edit transition for user choices so it doesn't shift everything down on hover

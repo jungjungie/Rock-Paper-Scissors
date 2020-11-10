@@ -3,7 +3,23 @@ body {
     background: #fce6e9;
     color: #333;
     font-family: 'Poppins', sans-serif;
-    
+}
+
+.show {
+    display: block;
+    color: #333;
+    animation: fadeIn ease 0.7s;
+    -webkit-animation: fadeIn ease 0.7s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+.hide {
+    display: none;
 }
 
 /* RPS Cards */
@@ -13,12 +29,12 @@ body {
 }
 
 .userChoiceCards {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin: 0 0 30px 0;
     border: none;
     border-radius: 50%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #rockCard {
@@ -51,9 +67,10 @@ body {
     transition: 0.5s;
 }
 
-.card-text {
+.rps-text {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
+    margin: 8px 0 0 0;
 }
 
 /* Main - Where player & comp moves populate */
@@ -68,25 +85,20 @@ body {
     height: 100%;
 }
 
-.show {
-    display: block;
-    color: #333;
-    animation: fadeIn ease 0.7s;
-    -webkit-animation: fadeIn ease 0.7s;
+#userMoveText, #compMoveText {
+    margin-top: 20px;
 }
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
-
-.hide {
-    display: none;
-}
-
+/* Results */
 #result {
     text-align: center;
     padding: 30px;
     font-size: 2em;
+}
+
+/* Media Queries */
+@media (max-width: 450px) {
+    #directions {
+        margin-top: 10px;
+    }
 }
