@@ -1,15 +1,19 @@
 /* General */
 body {
-    background: #fce6e9;
-    color: #333;
+    background: #0da2ff;
+    color: white;
     font-family: 'Poppins', sans-serif;
 }
 
 .show {
     display: block;
-    color: #333;
+    color: #444;
     animation: fadeIn ease 0.7s;
     -webkit-animation: fadeIn ease 0.7s;
+}
+
+.white {
+    color: white;
 }
 
 @keyframes fadeIn {
@@ -17,9 +21,15 @@ body {
     100% {opacity:1;}
 }
 
-
 .hide {
     display: none;
+    animation: fadeOut ease 1s;
+    -webkit-animation: fadeOut ease 1s;
+}
+
+@keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;}
 }
 
 /* RPS Cards */
@@ -29,42 +39,23 @@ body {
 }
 
 .userChoiceCards {
-    width: 120px;
-    height: 120px;
-    margin: 0 0 30px 0;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
     border: none;
-    border-radius: 50%;
+    border-radius: 5px;
     /* text-align: center; */
 }
 
-#rockCard {
-    background: #d2b6e5;
+#rockCard, #paperCard, #scissorsCard {
+    color: #444;
+    /* background: #d2b6e5; */
 }
 
-#rockCard:hover {
-    background: #c3a3d8;
-    margin-top: 3px;
+#rockCard:hover, #paperCard:hover, #scissorsCard:hover {
+    margin: 14px 10px 6px 10px;
     transition: 0.5s;
-}
-
-#paperCard {
-    background: #e3b6e5;
-}
-
-#paperCard:hover {
-    background: #d9a3dc;
-    margin-top: 3px;
-    transition: 0.5s;
-}
-
-#scissorsCard {
-    background: #1ce3dc;
-}
-
-#scissorsCard:hover {
-    background: #0fd3cd;
-    margin-top: 3px;
-    transition: 0.5s;
+    background: #90ee90;
 }
 
 .rps-text {
@@ -79,6 +70,10 @@ body {
     border-radius: 5px;
     background: white;
     color: black;
+}
+
+h3 {
+    margin-top:15px;
 }
 
 #userMoveCard {

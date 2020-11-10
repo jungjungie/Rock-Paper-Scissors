@@ -71,7 +71,7 @@ function determineWinner() {
     console.log(`user: ${userMove}`);
     console.log(`comp: ${compMove}`);
 
-    result.setAttribute("class", "show");
+    result.setAttribute("class", "show white");
 
     if (userMove === compMove) {
         result.textContent="It's a tie!"
@@ -95,5 +95,3 @@ function determineWinner() {
 for (let i=0; i < userChoiceCards.length; i++) {
     userChoiceCards[i].addEventListener("click", setUserMove);
 }
-
-// Edit transition for user choices so it doesn't shift everything down on hover
