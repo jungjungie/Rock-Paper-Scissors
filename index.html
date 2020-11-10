@@ -17,8 +17,39 @@
 </head>
 
 <body>
-    <p id="directions" class="text-center">Choose your move!</p>
+    <!-- Player titles -->
+    <div class="d-flex align-items-center justify-content-center text-center">
+        <h3 class="col-6">Player</h3>
+        <h3 class="col-6">Computer</h3>
+    </div>
 
+    <!-- Main - Where player & comp moves populate -->
+    <section class="container d-flex align-items-center justify-content-center text-center shadow-sm">
+        <!-- Card where user's move is populated -->
+        <div class="col-5">
+            <div id="userMoveCard" class="text-center">
+                <i class="hide userIcon" aria-hidden="true"></i>
+                <h3 id="userMoveText" class="hide">USER</h3>
+            </div>
+        </div>
+
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <p>vs.</p>
+        </div>
+
+        <!-- Card where comp's move is populated -->
+        <div class="col-5">
+            <div id="compMoveCard" class="text-center">
+                <i class="hide compIcon" aria-hidden="true"></i>
+                <h3 id="compMoveText" class="hide">COMP</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where result gets displayed -->
+    <p id="result"></p>
+
+    <!-- RPS Cards -->
     <div class="d-flex align-items-center justify-content-center text-center">
 
         <!-- Choices for user's move -->
@@ -55,34 +86,8 @@
         </div>
     </div>
 
-    <div class="d-flex align-items-center justify-content-center text-center">
-        <h3 class="col-6">Player</h3>
-        <h3 class="col-6">Computer</h3>
-    </div>
-
-    <section class="container d-flex align-items-center justify-content-center text-center shadow-sm">
-        <!-- Card where user's move is populated -->
-        <div class="col-5">
-            <div id="userMoveCard" class="text-center">
-                <i class="hide userIcon" aria-hidden="true"></i>
-                <h3 id="userMoveText" class="hide">USER</h3>
-            </div>
-        </div>
-
-        <div class="col-2 d-flex align-items-center justify-content-center">
-            <p>vs.</p>
-        </div>
-
-        <!-- Card where comp's move is populated -->
-        <div class="col-5">
-            <div id="compMoveCard" class="text-center">
-                <i class="hide compIcon" aria-hidden="true"></i>
-                <h3 id="compMoveText" class="hide">COMP</h3>
-            </div>
-        </div>
-    </section>
-
-    <p id="result"></p>
+    <!-- User directions -->
+    <p id="directions" class="text-center">Choose your move!</p>
 
     <script type="text/javascript" src="./script.js"></script>
 </body>

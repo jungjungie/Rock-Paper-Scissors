@@ -5,15 +5,15 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.white {
+    color: white;
+}
+
 .show {
     display: block;
     color: #444;
     animation: fadeIn ease 0.7s;
     -webkit-animation: fadeIn ease 0.7s;
-}
-
-.white {
-    color: white;
 }
 
 @keyframes fadeIn {
@@ -30,6 +30,33 @@ body {
 @keyframes fadeOut {
     0% {opacity:1;}
     100% {opacity:0;}
+}
+
+/* Main - Where player & comp moves populate */
+.container {
+    min-height: 300px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+h3 {
+    margin-top:15px;
+}
+
+#userMoveCard {
+    height: 100%;
+}
+
+#userMoveText, #compMoveText {
+    margin-top: 20px;
+}
+
+/* Results */
+#result {
+    text-align: center;
+    padding: 30px;
+    font-size: 2em;
 }
 
 /* RPS Cards */
@@ -62,33 +89,6 @@ body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     margin: 8px 0 0 0;
-}
-
-/* Main - Where player & comp moves populate */
-.container {
-    min-height: 300px;
-    border-radius: 5px;
-    background: white;
-    color: black;
-}
-
-h3 {
-    margin-top:15px;
-}
-
-#userMoveCard {
-    height: 100%;
-}
-
-#userMoveText, #compMoveText {
-    margin-top: 20px;
-}
-
-/* Results */
-#result {
-    text-align: center;
-    padding: 30px;
-    font-size: 2em;
 }
 
 /* Media Queries */
